@@ -20,10 +20,7 @@ def import_data():
     fpl_element_stats = pd.DataFrame(json['element_stats'])
     fpl_element_types = pd.DataFrame(json['element_types'])
     fpl_elements = pd.DataFrame(json['elements'])
-    fpl_events = pd.DataFrame(json['events'])
-    
-    fpl_game_settings = json['game_settings']
-    
+    fpl_events = pd.DataFrame(json['events'])    
     fpl_phases = pd.DataFrame(json['phases'])
     fpl_teams = pd.DataFrame(json['teams'])
     
@@ -34,12 +31,4 @@ def import_data():
 
 
 
-fpl_element_stats, fpl_element_types, fpl_elements, fpl_events, \
-fpl_game_settings, fpl_phases, fpl_teams, fpl_total_players = import_data()
 
-# Select useful variables from element data frame
-data = fpl_elements[['team', 'element_type', 'web_name', 'now_cost', 'minutes',
-                     'total_points', 'form', 'value_season', 'selected_by_percent', 'ict_index']]
-
-for i in fpl_teams.name:
-    print(i)
