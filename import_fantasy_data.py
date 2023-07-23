@@ -21,14 +21,8 @@ def import_data():
     fpl_element_types = pd.DataFrame(json['element_types'])
     fpl_elements = pd.DataFrame(json['elements'])
     fpl_events = pd.DataFrame(json['events'])    
-    fpl_phases = pd.DataFrame(json['phases'])
     fpl_teams = pd.DataFrame(json['teams'])
     
-    fpl_total_players = json['total_players']
-    
-    return fpl_element_stats, fpl_element_types, fpl_elements, fpl_events, \
-           fpl_game_settings, fpl_phases, fpl_teams, fpl_total_players
-
-
+    return fpl_element_stats, fpl_element_types, fpl_elements, fpl_events, fpl_teams
 
 
