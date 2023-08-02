@@ -6,19 +6,15 @@ Created on Sat Jul 22 10:12:28 2023
 """
 
 from import_fantasy_data import import_data
-import matplotlib.pyplot as plt
+from plot_ppm import plot_ppm
 
 
 fpl_element_stats, fpl_element_types, fpl_elements, fpl_events, fpl_teams = import_data()
 
+plot_ppm(fpl_elements)
 
-plt.figure()
-ppm = fpl_elements['total_points'] / fpl_elements['minutes']
 
-plt.plot(fpl_elements['total_points'], ppm, 'k.')
-plt.xlabel('Total Points')
-plt.ylabel('Points Per Minute')
-plt.show()
+
 
 
 
